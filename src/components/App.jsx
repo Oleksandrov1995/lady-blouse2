@@ -15,30 +15,31 @@ import { Questions } from "./Questions/Questions";
 import { Reviews } from "./Reviews/Reviews";
 import { ShopingList } from "./ShopingList/ShopingList";
 export const App = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  // const [modalOpen, setModalOpen] = useState(false);
 
-  const handleModalOpen = () => {
-    setModalOpen(true);
-  };
-  const handleModalClose = () => {
-    setModalOpen(false)
-  }
+  // const handleModalOpen = () => {
+  //   setModalOpen(true);
+  // };
+  // const handleModalClose = () => {
+  //   setModalOpen(false)
+  // }
 
 
   return (
    <><div className="container">
-   <Header openModal={handleModalOpen} />
+   <Header  />
    <Main/>
    <Proposal/>
    <AboutProduct/>
    <ProductSize/>
-  <ChooseColor openModal={handleModalOpen}/>
+  <ChooseColor />
    <Reviews/>
     <OurBenefits/>
    <Questions/>
    <Feadback/>
    <Contacts/>
-   <ShopingList openModal={modalOpen} closeModal={handleModalClose} />
+ {/* <ShopingList openModal={modalOpen} closeModal={handleModalClose} /> */}
+
 
    <Footer/>
    </div>
