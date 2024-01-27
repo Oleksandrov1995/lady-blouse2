@@ -4,7 +4,7 @@ export const Main = ()=>{
     return(
         <section className="main-container">
             <div className="main-titles">
-<h1 className="main-title">БАЗОВІ ЖИЛЕТИ З БАВОВНИ ТА АКРИЛУ В НАЙСТИЛЬНІШИХ ТА ПРАКТИЧНИХ КОЛЬОРАХ</h1>
+<h1 className="main-title">Теплі та якісні довгі пуховики в 10 актуальних та оригінальних кольорах</h1>
 <h4 className="title">НА СОРОЧКУ, БЛУЗУ, ФУТБОЛКУ АБО ГОЛЬФ</h4>
 <ul className="main-benefits">
 <li><h3>Відправка в день замовлення </h3></li>

@@ -21,6 +21,9 @@ padding-bottom: 50px;
      font-size: 12px;
      line-height: 37px;
 }
+.main-title{
+    text-transform: uppercase;
+}
 .title{
     font-style: italic;
 }
