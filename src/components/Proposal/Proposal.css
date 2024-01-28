@@ -46,7 +46,7 @@ padding-bottom: 50px;
 }
 .proposal-todayPrice {
   position: absolute;
-  right: 65px;
+  right: 55px;
   bottom: 18px;
 }
 .price-text {
@@ -54,6 +54,7 @@ padding-bottom: 50px;
   color: antiquewhite;
 }
 .proposal-img{
+  border: 7px solid white;
    width: 320px;
 }
 .proposal-text{
@@ -81,11 +82,11 @@ padding-bottom: 50px;
     left: 80px;
   }
   .proposal-todayPrice {
-    right: 80px;
+    right: 75px;
     bottom:  25px;
   }
   .price-text {
-   font-size: 28px;
+   font-size: 26px;
   }
 }
 @media only screen and (min-width: 1020px) {
@@ -107,7 +108,7 @@ padding-bottom: 50px;
     left: 160px;
   }
   .proposal-todayPrice {
-    right: 160px;
+    right: 150px;
     bottom:  50px;
   }
   .price-text {

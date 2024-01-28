@@ -4,18 +4,30 @@ export const ProductSize = () => {
   return (
     <section id="productSize" className='productSize'>
       <h2>Заміри виробу</h2>
-      <ul className='productSize-list'>
-        <li>
-       <p><span className='productSize-bolt'>Розмір: </span> 42 - 44 - 46 - універсальний</p>
-        </li>
-        <li>
-          <p><span className='productSize-bolt'>Довжина жилету: </span> 50 см -ідеальна довжина для стильної двошаровості</p>
-        </li>
-        <li>
-          <p><span className='productSize-bolt'>Ширина жилету: </span> 50 см -легко тягнеться до 54 см на ОГ до 108 см</p>
-        </li>
-      </ul>
-      <p><span className='productSize-bolt'>*</span>  також стильно виглядає як оверсайз на розмірі 40, при цьому легко тягнеться до розміру 48 не втрачаючи форму та пружність</p>
+      <table className='productSize-table'>
+  <tr>
+    <th>Розмір</th>
+    <th>Обхват грудей, см</th>
+    <th>Довжина, см</th>
+  </tr>
+  <tr>
+    <td>42-46</td>
+    <td>88-108</td>
+    <td>100\120</td>
+  </tr>
+  <tr>
+    <td>48-50</td>
+    <td>106-116</td>
+    <td>100\120</td>
+  </tr>
+  <tr>
+    <td>52-54</td>
+    <td>114-124</td>
+    <td>100\120</td>
+  </tr>
+
+</table>
+      <p><span className='productSize-bolt'>*</span>  Розмір 52-54 доступний під замовлення з доплатою 210 грн, термін виробництва 5 робочих днів, потім доставка 1-3 дні. Також можете залишити заявку і уточнити наявність розміру.</p>
     </section>
   );
 };

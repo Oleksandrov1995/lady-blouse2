@@ -1,8 +1,8 @@
 import './Proposal.css';
 import { Link } from 'react-scroll';
 
-let price = 792;
-let todayPrice = 539;
+let price = 3678;
+let todayPrice = 2989;
 
 
 export const Proposal = () => {
@@ -14,7 +14,7 @@ export const Proposal = () => {
             src={require('../../Images/proposal1.jpg')}
             alt="Дівчина в жилетці"
           />
-          <p className="proposal-item-text">Доповнює стиль та <br/> додає тепла</p>
+          <p className="proposal-item-text">Добре зігріє та<br/>не завадить бути стильною</p>
         </li>
         <li className="proposal-item">
           {' '}
@@ -22,7 +22,7 @@ export const Proposal = () => {
             src={require('../../Images/proposal2.jpg')}
             alt="Жилетка на вішаку"
           />
-          <p className="proposal-item-text">Висока якість пошиву <br/>  та тканини</p>
+          <p className="proposal-item-text">Якісні, практичні та<br/>ефектні матеріали</p>
         </li>
         <li className="proposal-item">
           {' '}
@@ -30,7 +30,7 @@ export const Proposal = () => {
             src={require('../../Images/proposal3.jpg')}
             alt="Дівчина в жилетці"
           />
-          <p className="proposal-item-text">Приховує особливості <br/> фігури</p>
+          <p className="proposal-item-text">Увага до деталей виробу<br/>для вашого комфорту</p>
         </li>
       </ul>
       <div className="proposal-allPrice">
@@ -50,9 +50,9 @@ export const Proposal = () => {
             offset={-70}
             duration={500}
           >
-            Обрати жилет
+            Обрати куртку
           </Link></button>
-      <p className='proposal-text'>Залишилося <span style={{ background: '#ff671e' }}>11</span> штук по акції</p>
+      <p className='proposal-text'>Залишилося <span style={{ background: '#ff671e' }}>17</span> штук по акції. Встигніть замовити свій колір!</p>
     </section>
   );
 };
