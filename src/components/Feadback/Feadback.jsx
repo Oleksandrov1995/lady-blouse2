@@ -32,7 +32,7 @@ export const Feadback = () => {
       return;
     }
     sendMessage(
-      `Нова заявка! Хочу жилет!!! Зателефонуй мені! \nІм'я: ${name}\nТелефон: ${phone}`
+      `Нова заявка! Хочу Куртку!!! Зателефонуй мені! \nІм'я: ${name}\nТелефон: ${phone}`
     );
     setIsSuccess(true);
     setName('');

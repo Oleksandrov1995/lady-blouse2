@@ -9,14 +9,17 @@ export const ChooseColor = ({ modalOpen }) => {
     return storedProducts ? JSON.parse(storedProducts) : [];
   });
 
-  const handleAddProduct = async productId => {
+  const handleAddProduct = async (productId, productSize) => {
+   
     const selectedProduct = productsData.find(
       product => productId === product.id
+      
     );
-
+  
     const storedProducts = JSON.parse(localStorage.getItem('products')) || [];
+
     const isProductAdded = storedProducts.find(
-      product => productId === product.id
+      product => productId === product.id && productSize===product.size
     );
 
     if (isProductAdded) {
@@ -53,7 +56,7 @@ export const ChooseColor = ({ modalOpen }) => {
             <p className="productTodayPrice-text">{product.todayPrice} грн</p>
             <p className="product-color">{product.color}</p>
             <button
-              onClick={() => handleAddProduct(product.id)}
+              onClick={() => handleAddProduct(product.id, product.size)}
               className="product-button"
               type="button"
             >

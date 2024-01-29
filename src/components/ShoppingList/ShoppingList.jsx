@@ -11,6 +11,7 @@ import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { sendMessage } from 'utilities/sendMessage';
 
+
 export const ShoppingList = ({ modalOpen, modalClose }) => {
   const [products, setProducts] = useState([]);
 
@@ -23,6 +24,7 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
   const [question, setQuestion] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
   const [isFailure, setIsFailure] = useState(false);
+  const [selectedSizes, setSelectedSizes] = useState({});
 
   useEffect(() => {
     const products = JSON.parse(localStorage.getItem('products'));
@@ -31,6 +33,7 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
       setProducts(products);
     }
   }, [modalOpen]);
+
 
   useEffect(() => {
     if (isSuccess) {
@@ -45,26 +48,52 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
       setTimeout(() => setIsFailure(false), 4000);
     }
   }, [isFailure]);
+  
 
-  const handleDeleteProduct = productId => {
-    const updatedProducts = products.filter(
-      product => product.id !== productId
-    );
-    return setProducts(updatedProducts);
+  const handleDeleteProduct = (productId, productSize) => {
+    const updatedProducts = products.map(product => {
+      if (product.id === productId && product.size === productSize) {
+        return null;
+      }
+    
+      return product;
+    }).filter(Boolean);
+    setProducts(updatedProducts);
   };
+  
 
-  const handleAddToCart = productId => {
+  const handleSizeChange = (productId, productSize, selectedSize) => {
+    
+    const updatedSelectedSizes = {
+      ...selectedSizes,
+      [productId]: selectedSize
+    };
+    setSelectedSizes(updatedSelectedSizes);
+    
+    const updatedProducts = products.map(product => {
+      if (product.id === productId && product.size === productSize) {
+        return { ...product, size: selectedSize };
+      }
+      return product;
+    });
+    setProducts(updatedProducts);
+  };
+  
+
+  const handleAddToCart = (productId, productSize) => {
     const updatedProducts = products.map(product =>
-      product.id === productId
+      product.id === productId && product.size === productSize
         ? { ...product, quantity: (product.quantity || 1) + 1 }
         : product
     );
     setProducts(updatedProducts);
   };
-  const handleRemoveFromCart = productId => {
+
+
+  const handleRemoveFromCart = (productId, productSize) => {
     const updatedProducts = products
       .map(product =>
-        product.id === productId
+        product.id === productId && product.size === productSize
           ? { ...product, quantity: Math.max((product.quantity || 0) - 1, 0) }
           : product
       )
@@ -72,11 +101,16 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
 
     return setProducts(updatedProducts);
   };
-  const totalAmount = products.reduce((total, product) => {
-    const productTotal = (product.todayPrice || 0) * (product.quantity || 1);
-    return total + productTotal;
-  }, 0);
 
+ const totalAmount = products.reduce((total, product) => {
+  let productTotal = (product.todayPrice || 0) * (product.quantity || 1);
+
+  if (product.size === '52-54/100' || product.size === '52-54/120') {
+    productTotal += 210 * (product.quantity || 1);
+  }
+
+  return total + productTotal;
+}, 0);
   const handleFormSubmit = async e => {
     e.preventDefault();
     const phoneRegex = /^\d{10}$/;
@@ -84,9 +118,9 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
       setIsFailure(true);
       return;
     }
-    sendMessage(`Нова заявка! Хочу жилет!!!
+    sendMessage(`Нова заявка! Хочу Куртку!!!
       \nТовар: ${products.map(
-        product => `${product.color} (${product.quantity})`
+        product => `${product.color} ${product.size} (${product.quantity})`
       )}
       \nЗагальна сума: ${totalAmount}
       \nІм'я: ${name}
@@ -111,6 +145,7 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
   };
 
   const handleModalClose = async () => {
+   
     await localStorage.setItem('products', JSON.stringify(products));
     modalClose();
   };
@@ -133,23 +168,43 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
           <h2 className="shoppingList-title">Ваше замовлення:</h2>
           {products &&
             products.map(product => (
-              <div key={product.id} className="shoppingList-product">
+              <div key={product.id+product.size} className="shoppingList-product">
+             
                 <p className="shoppingList-productName">
-                  Жилет {product.color}
+                  Колір куртки: {product.color}
                 </p>
+                <label htmlFor="Size" >Розмір/Довжина:</label>
+                <select className='modalSelectSize'
+                  id="Size"
+                  value={product.size}
+                  onChange={(e) => handleSizeChange(product.id, product.size, e.target.value)}
+                >
+                  <option value="0">- розмір/довжина -</option>
+                  <option value="42-46/100">42-46/100 см</option>
+                  <option value="42-46/120">42-46/120 см</option>
+                  <option value="48-50/100">48-50/100 см</option>
+                  <option value="48-50/120">48-50/120 см</option>
+                  <option value="52-54/100">52-54/100 см</option>
+                  <option value="52-54/120">52-54/120 см</option>
+                </select>
+
+
                 <p className="shoppingList-quantity">
                   Кількість:
                   <RemoveCircleOutlineIcon
-                    onClick={() => handleRemoveFromCart(product.id)}
+                    onClick={() => handleRemoveFromCart(product.id,product.size)}
                   />
                   {product.quantity || 1}{' '}
-                  <AddCircleIcon onClick={() => handleAddToCart(product.id)} />
+                  <AddCircleIcon onClick={() => handleAddToCart(product.id,product.size)} />
                   <span className="shoppingList-productPrice">
-                    {product.todayPrice * (product.quantity || 1)} грн.
+                  {product.size === "52-54/100" || product.size === "52-54/120" ?
+  (210 + product.todayPrice * (product.quantity || 1)) :
+  (product.todayPrice * (product.quantity || 1))} грн.
+
                   </span>
                   <DeleteOutlineIcon
                     className="shoppingList-deleteIcon"
-                    onClick={() => handleDeleteProduct(product.id)}
+                    onClick={() => handleDeleteProduct(product.id, product.size)}
                   />
                 </p>
               </div>

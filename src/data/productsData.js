@@ -6,7 +6,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size: "0"
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size: "0"
   },
   {
     id: 3,
@@ -24,7 +26,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size: "0"
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size:"0"
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size: "0"
   },
   {
     id: 6,
@@ -51,7 +56,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size: "0"
   },
   {
     id: 7,
@@ -60,7 +66,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size: "0"
   },
   {
     id: 8,
@@ -69,7 +76,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size:"0"
   },
   {
     id: 9,
@@ -78,7 +86,8 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size: "0"
   },
   {
     id: 10,
@@ -87,6 +96,7 @@ export const productsData = [
     price: 3678,
     todayPrice: 2989,
     discount: 19,
-    quantity:1
+    quantity:1,
+    size: "0"
   },
 ];

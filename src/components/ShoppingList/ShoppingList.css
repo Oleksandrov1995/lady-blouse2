@@ -31,6 +31,7 @@
 .shoppingList-productName {
   font-weight: bold;
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .shoppingList-quantity {
@@ -47,7 +48,9 @@
   text-align: right;
   font-size: 14px;
 }
-
+.modalSelectSize{
+  margin-left: 7px;
+}
 .shoppingList-deleteIcon {
   margin-left: auto;
   cursor: pointer;
