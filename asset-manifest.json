@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/lady-blouse2/static/css/main.3b15a540.css",
-    "main.js": "/lady-blouse2/static/js/main.8e83acbf.js",
+    "main.css": "/lady-blouse2/static/css/main.c5f1974b.css",
+    "main.js": "/lady-blouse2/static/js/main.b63cb256.js",
     "static/media/aboutProduct4.jpg": "/lady-blouse2/static/media/aboutProduct4.c1d2c858be475264746f.jpg",
     "static/media/aboutProduct5.jpg": "/lady-blouse2/static/media/aboutProduct5.d2f93afd8f03912889be.jpg",
     "static/media/aboutProduct3.jpg": "/lady-blouse2/static/media/aboutProduct3.10c531afb489899cf564.jpg",
@@ -18,24 +18,23 @@
     "static/media/product6.jpeg": "/lady-blouse2/static/media/product6.c47bad2487ec36364b09.jpeg",
     "static/media/product8.jpeg": "/lady-blouse2/static/media/product8.fcc2383514a431800ced.jpeg",
     "static/media/product9.jpeg": "/lady-blouse2/static/media/product9.35e065ca95f24bf3d66c.jpeg",
+    "static/media/reviews4.jpg": "/lady-blouse2/static/media/reviews4.b42bf2cc523bb9607a3d.jpg",
     "static/media/prices1.png": "/lady-blouse2/static/media/prices1.dd9604ca44d9c0a7bbdc.png",
+    "static/media/reviews1.jpg": "/lady-blouse2/static/media/reviews1.b4fdcb1a714ff3e31958.jpg",
     "static/media/product4.jpeg": "/lady-blouse2/static/media/product4.16b2eb09251ffe85178f.jpeg",
+    "static/media/reviews2.jpg": "/lady-blouse2/static/media/reviews2.c34a5f98a745d2c8b592.jpg",
     "static/media/product1.jpeg": "/lady-blouse2/static/media/product1.05c174decc90ae93bd71.jpeg",
+    "static/media/reviews3.jpg": "/lady-blouse2/static/media/reviews3.5bf56e57305d260941ef.jpg",
     "static/media/product2.jpeg": "/lady-blouse2/static/media/product2.1a9a87d445846ea18093.jpeg",
     "static/media/mainImage.jpg": "/lady-blouse2/static/media/mainImage.dde1bf9bf748426bfe20.jpg",
-    "static/media/reviews2.png": "/lady-blouse2/static/media/reviews2.ce277cd1a583e495f60b.png",
-    "static/media/reviews3.png": "/lady-blouse2/static/media/reviews3.31641ba3d80ab75b2d41.png",
-    "static/media/reviews1.png": "/lady-blouse2/static/media/reviews1.797b0dcec5b1abf30961.png",
-    "static/media/reviews4.png": "/lady-blouse2/static/media/reviews4.df28e4dd660b45f3509c.png",
-    "static/media/reviews5.png": "/lady-blouse2/static/media/reviews5.ba99dabcbb519fce2c1f.png",
     "static/media/logo2.png": "/lady-blouse2/static/media/logo2.cd68e7d88b5525f51a59.png",
     "static/media/logo1.jpg": "/lady-blouse2/static/media/logo1.051c716fd5532611781a.jpg",
     "index.html": "/lady-blouse2/index.html",
-    "main.3b15a540.css.map": "/lady-blouse2/static/css/main.3b15a540.css.map",
-    "main.8e83acbf.js.map": "/lady-blouse2/static/js/main.8e83acbf.js.map"
+    "main.c5f1974b.css.map": "/lady-blouse2/static/css/main.c5f1974b.css.map",
+    "main.b63cb256.js.map": "/lady-blouse2/static/js/main.b63cb256.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b15a540.css",
-    "static/js/main.8e83acbf.js"
+    "static/css/main.c5f1974b.css",
+    "static/js/main.b63cb256.js"
   ]
 }
