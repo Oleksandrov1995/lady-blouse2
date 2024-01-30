@@ -173,8 +173,9 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
                 <p className="shoppingList-productName">
                   Колір куртки: {product.color}
                 </p>
-                <label htmlFor="Size" >Розмір/Довжина:</label>
-                <select className='modalSelectSize'
+                <form className='modalSelectSize'>
+                <label  htmlFor="Size" >Розмір/Довжина:</label>
+                <select className='modalSelect'
                   id="Size"
                   value={product.size}
                   onChange={(e) => handleSizeChange(product.id, product.size, e.target.value)}
@@ -187,7 +188,7 @@ export const ShoppingList = ({ modalOpen, modalClose }) => {
                   <option value="52-54/100">52-54/100 см</option>
                   <option value="52-54/120">52-54/120 см</option>
                 </select>
-
+                </form>
 
                 <p className="shoppingList-quantity">
                   Кількість:
