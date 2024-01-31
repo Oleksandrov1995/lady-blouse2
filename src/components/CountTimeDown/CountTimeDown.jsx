@@ -15,12 +15,19 @@ const CountTimeDown = () => {
 
   
   const renderer = ({ hours, minutes, seconds }) => (
+    <div>
     <div className="countdown-display">
       <div className="countdown-timer">
         <span className="countdown-unit">{hours.toString().padStart(2, '0')}</span>:
         <span className="countdown-unit">{minutes.toString().padStart(2, '0')}</span>:
         <span className="countdown-unit">{seconds.toString().padStart(2, '0')}</span>
+        
       </div>
+      
+    </div>
+    <div className="countdown-text"><p>год</p>
+        <p>хв</p>
+          <p>ceк</p></div>
     </div>
   );
 
