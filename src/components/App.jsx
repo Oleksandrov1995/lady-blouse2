@@ -16,6 +16,7 @@ import { Reviews } from "./Reviews/Reviews";
 import { ShoppingList } from "./ShoppingList/ShoppingList";
 import { ShoppingListButton } from "./ShoppingListButton/ShoppingListButton";
 
+
 export const App = () => {
 
   const[modalOpen, setModalOpen] = useState(false);
@@ -38,6 +39,7 @@ export const App = () => {
    <Feadback/>
    <Contacts/>
    <Footer/>
+
    </div>
    </>
   );

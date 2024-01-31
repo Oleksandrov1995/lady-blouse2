@@ -1,6 +1,6 @@
 import './Proposal.css';
 import { Link } from 'react-scroll';
-
+import CountTimeDown from "../CountTimeDown/CountTimeDown";
 let price = 3678;
 let todayPrice = 2989;
 
@@ -41,7 +41,8 @@ export const Proposal = () => {
         <span className="proposal-price price-text">{price} ГРН</span>
         <span className="proposal-todayPrice price-text">{todayPrice} ГРН</span>
       </div>
-      <h3 className='proposal-text'>Пропозиція діє до кінця тижня</h3>
+      <h3 className='proposal-text'>Пропозиція діє ще:</h3>
+      <CountTimeDown/>
       <button type='button' className='proposal-button'> <Link
       
             to="chooseColor"
